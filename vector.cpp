@@ -57,3 +57,15 @@ T& Vector<T>::back(){
 
     return elem[sz - 1];
 }
+
+template<typename T>
+void Vector<T>::insert(T x, int num){
+    if(num < 0) num += sz;
+    if(num < 0) throw std::runtime_error(ind_error);
+    
+    if(num >= sz) throw std::runtime_error(ind_error);
+
+    elem = (T* )realloc(elem, sz + 1)
+
+    
+}

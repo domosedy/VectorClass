@@ -27,6 +27,9 @@ public:
     T& back();
     T* begin();
     T* end();
+
+    void insert(T x, int ind);
+    void remove(T x, int ind);
 };
 //#include "vector.cpp"
 #endif
