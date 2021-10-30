@@ -6,7 +6,6 @@
 
 
 const char ind_error[] = "Index is out of range";
-
 template<typename T>
 void Vector<T>::push_back(T x){
     elem = (T* )realloc(elem, sz + 1);
@@ -44,4 +43,17 @@ T* Vector<T>::end(){
     if(sz == 0) throw std::runtime_error(ind_error);
 
     return &(elem[sz - 1]) + 1;
+}
+
+template<typename T>
+T& Vector<T>::front(){
+    if(sz == 0) throw std::runtime_error(ind_error);;
+    return elem[0];
+}
+
+template<typename T>
+T& Vector<T>::back(){
+    if(sz == 0) throw std::runtime_error(ind_error);;
+
+    return elem[sz - 1];
 }

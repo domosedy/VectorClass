@@ -13,7 +13,10 @@ signed main(){
     a2.push_back(12);
     
 
-    for(auto it : a2)
-        std::cout << it << ' ';
-    std::cout << endl;
+    a2.back() = 13;
+
+    for(auto it : a2){
+        cout << it << ' ';
+    }
+    cout << endl;
 }
